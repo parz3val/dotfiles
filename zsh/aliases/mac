@@ -1,0 +1,8 @@
+# Aliases for the my mac workflow
+alias rrr="source ~/.zshrc" # reloads the zshrc/bashrc
+alias eee="vi ~/.zshrc" # loads zshrc in vi to edit
+alias ddd="cd ~/../../Volumes/ExternalDisk"
+alias rrr="source ~/.zshrc"
+alias hhh="cd ~"
+alias eea="vi ~/dotfiles/zsh/aliases/mac"
+alias xp="ddd; cd experiments"
