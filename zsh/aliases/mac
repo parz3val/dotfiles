@@ -1,8 +1,46 @@
 # Aliases for the my mac workflow
 alias rrr="source ~/.zshrc" # reloads the zshrc/bashrc
-alias eee="vi ~/.zshrc" # loads zshrc in vi to edit
+alias eee="nvim ~/.zshrc" # loads zshrc in vi to edit
 alias ddd="cd ~/../../Volumes/ExternalDisk"
 alias rrr="source ~/.zshrc"
 alias hhh="cd ~"
-alias eea="vi ~/dotfiles/zsh/aliases/mac"
+alias eea="nvim ~/dotfiles/zsh/aliases/mac"
+alias eep="nvim ~/dotfiles/zsh/aliases/mac_apps"
 alias xp="ddd; cd experiments"
+alias ppp='ddd;cd programming'
+alias ff='exa -aGF'
+alias b='cd ..'
+alias bb='b;b'
+alias bbb='b;b;b;'
+alias home='hhh;'
+alias www='ppp;gotomate'
+alias seehome='exa ~'
+#Aliases for the tmux control and stuff
+alias twork='tmux attach-session -t work'
+alias tf='tmux attach-session -t 0'
+alias tk='tmux new -s work'
+alias tss='tmux list-sessions'
+alias t11='tmux attach-session -t 1'
+alias eet='nvim ~/.tmux.conf'
+
+#Load the alias for the mac apps
+source ~/dotfiles/zsh/aliases/mac_apps
+
+# Load the funny functions
+source ~/dotfiles/zsh/aliases/funny_alias
+alias eef='nvim ~/dotfiles/zsh/aliases/funny_alias'
+
+
+# fuzzy finder script to find file
+fn(){ du -a  | awk '{print $2}' | fzf | xargs  nvim }
+
+# File navigation and such specific to my mac setup
+alias de='cd ~/Documents'
+alias we='de; krispcall-backend'
+
+# go into the external drive and load the progamming folder
+alias epe='ddd;cd Programming'
+
+# go into the config folder and list
+# with exa
+alias cef='$HOME;cd .config;exa -GFa'

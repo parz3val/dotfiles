@@ -10,8 +10,15 @@ alias vsc='open -a "Visual Studio Code"'
 # VSCodium
 alias cod='open -a "VSCodium"'
 
+alias code='open -a "VSCode"'
+
 # Firefox
 alias firefox='open -a "Firefox"'
 
 # PyCharm
 alias pyc='open -a "PyCharm"' 
+
+alias finder='open -a "Finder"' 
+
+# live wallpaper utility in rust
+alias liv='hhh;./liverusty'
