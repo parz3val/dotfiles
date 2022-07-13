@@ -22,3 +22,16 @@ alias finder='open -a "Finder"'
 
 # live wallpaper utility in rust
 alias liv='hhh;./liverusty'
+
+
+# Music application musikcube
+alias mmm='musikcube'
+
+# VLC
+alias vlc='open -a "VLC"'
+
+# for stremio
+alias stremio='open -a "Stremio"'
+
+# Wathing movies
+alias tv='cthulhu'

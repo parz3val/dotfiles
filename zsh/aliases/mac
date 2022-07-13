@@ -15,16 +15,22 @@ alias bbb='b;b;b;'
 alias home='hhh;'
 alias www='ppp;gotomate'
 alias seehome='exa ~'
+alias doc='home; Documents'
 #Aliases for the tmux control and stuff
 alias twork='tmux attach-session -t work'
 alias tf='tmux attach-session -t 0'
+alias tww='tmux new -s work'
+alias thh='tmux new -s home'
 alias tk='tmux new -s work'
 alias tss='tmux list-sessions'
 alias t11='tmux attach-session -t 1'
+alias ta='tmux attach'
 alias eet='nvim ~/.tmux.conf'
-
+alias cls='clear'
+alias eo='exit' # exit out
 #Load the alias for the mac apps
 source ~/dotfiles/zsh/aliases/mac_apps
+
 
 # Load the funny functions
 source ~/dotfiles/zsh/aliases/funny_alias
