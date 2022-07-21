@@ -4,8 +4,8 @@ alias eee="nvim ~/.zshrc" # loads zshrc in vi to edit
 alias ddd="cd ~/../../Volumes/ExternalDisk"
 alias rrr="source ~/.zshrc"
 alias hhh="cd ~"
-alias eea="nvim ~/dotfiles/zsh/aliases/mac"
-alias eep="nvim ~/dotfiles/zsh/aliases/mac_apps"
+alias eea="lvim ~/dotfiles/zsh/aliases/mac"
+alias eep="lvim ~/dotfiles/zsh/aliases/mac_apps"
 alias xp="ddd; cd experiments"
 alias ppp='ddd;cd programming'
 alias ff='exa -aGF'
@@ -25,7 +25,9 @@ alias tk='tmux new -s work'
 alias tss='tmux list-sessions'
 alias t11='tmux attach-session -t 1'
 alias ta='tmux attach'
-alias eet='nvim ~/.tmux.conf'
+alias t='tmux'
+alias lvim='~/.local/bin/./lvim'
+alias eet='lvim ~/.tmux.conf'
 alias cls='clear'
 alias eo='exit' # exit out
 #Load the alias for the mac apps
@@ -34,14 +36,11 @@ source ~/dotfiles/zsh/aliases/mac_apps
 
 # Load the funny functions
 source ~/dotfiles/zsh/aliases/funny_alias
-alias eef='nvim ~/dotfiles/zsh/aliases/funny_alias'
+alias eef='lvim ~/dotfiles/zsh/aliases/funny_alias'
 
 
 # fuzzy finder script to find file
-fn(){ du -a  | awk '{print $2}' | fzf | xargs  nvim }
-
-# File navigation and such specific to my mac setup
-alias de='cd ~/Documents'
+fn(){ du -a  | awk '{print $2}' | fzf | xargs  lvim }
 alias we='de; krispcall-backend'
 
 # go into the external drive and load the progamming folder
