@@ -30,6 +30,7 @@ alias lvim='~/.local/bin/./lvim'
 alias eet='lvim ~/.tmux.conf'
 alias cls='clear'
 alias eo='exit' # exit out
+alias rr='clear'
 #Load the alias for the mac apps
 source ~/dotfiles/zsh/aliases/mac_apps
 
