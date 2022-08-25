@@ -26,7 +26,7 @@ alias tss='tmux list-sessions'
 alias t11='tmux attach-session -t 1'
 alias ta='tmux attach'
 alias t='tmux'
-alias lvim='~/.local/bin/./lvim'
+alias lvim='nvim'
 alias eet='lvim ~/.tmux.conf'
 alias cls='clear'
 alias eo='exit' # exit out
@@ -41,7 +41,7 @@ alias eef='lvim ~/dotfiles/zsh/aliases/funny_alias'
 
 
 # fuzzy finder script to find file
-fn(){ du -a  | awk '{print $2}' | fzf | xargs  lvim }
+fn(){ du -a  | awk '{print $2}' | fzf | xargs  nvim }
 alias we='de; krispcall-backend'
 
 # go into the external drive and load the progamming folder
