@@ -1,0 +1,83 @@
+#
+# wm independent hotkeys
+#
+super +h
+    polybar-msg cmd hide
+super + o
+    rofi -show drun
+super + i
+    polybar-msg cmd show
+
+# reloads sxhkd configuration:
+super + Escape
+    pkill -USR1 -x sxhkd
+
+# Launch Terminal
+super + Return 
+    kitty
+
+super + b
+    google-chrome-stable
+
+
+# Fullscreen Terminal
+super + shift + t
+    alacritty
+    #terminal -m
+
+# Toggle Conkeww
+super + shift + e
+    toggle-conkeww
+
+# j4 dmenu
+alt + F1
+    j4-dmenu
+
+# Launch Menus
+#alt + {x,n,d,s}
+#    {powermenu,def-nmdmenu,def-dmenu,def-ssdmenu}
+
+# Launch dmenu
+super + z
+    zotero
+# Launch menu
+super + n
+    def-dmenu
+
+# launch ssd menu
+super + s
+    def-ssdmenu
+
+# Lock Screen
+ctrl + alt + l
+    lock
+
+# custom dmenu scripts
+alt + {e,l}
+    {edit-configs, quick-links}
+
+# Launch Applications
+super + shift + {f,b,r,g,c,d,s,v}
+    {thunar,firefox,xfce4-terminal -x ranger,geany,code,discord,spotify,virtualbox}
+    #{thunar,firefox,terminal -e ranger,geany,code,discord,spotify,virtualbox}
+
+# Volume controls
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+    volume{ --up, --down, --toggle}
+
+# Brightness controls
+XF86MonBrightness{Up,Down}
+    brightness{ --up, --down}
+
+# screenshot
+Print
+    takeshot --now
+
+# screenshot active window
+ctrl + Print
+    takeshot --win
+
+# screenshot selected area
+ctrl + shift + Print
+    takeshot --area
+

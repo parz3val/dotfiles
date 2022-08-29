@@ -42,6 +42,9 @@ source ~/dotfiles/zsh/aliases/funny_alias
 alias eef='lvim ~/dotfiles/zsh/aliases/funny_alias'
 
 
+# load leftwm shortcuts
+source ~/dotfiles/zsh/aliases/leftwm
+
 # fuzzy finder script to find file
 fn(){ du -a  | awk '{print $2}' | fzf | xargs  nvim }
 alias we='de; krispcall-backend'
