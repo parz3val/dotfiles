@@ -1,5 +1,0 @@
-2022/08/24-07:54:43.747 37ccf Creating DB /home/kalupc/.config/Slack/Local Storage/leveldb since it was missing.
-2022/08/24-07:54:43.767 37ccf Reusing MANIFEST /home/kalupc/.config/Slack/Local Storage/leveldb/MANIFEST-000001
-2022/08/24-08:35:44.432 55ae7 Level-0 table #5: started
-2022/08/24-08:35:44.442 55ae7 Level-0 table #5: 19396 bytes OK
-2022/08/24-08:35:44.451 55ae7 Delete type=0 #3
