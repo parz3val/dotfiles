@@ -55,3 +55,4 @@ alias epe='ddd;cd Programming'
 # go into the config folder and list
 # with exa
 alias cef='$HOME;cd .config;exa -GFa'
+alias mpr='rm -rf ~/Library/Caches/pypoetry/virtualenvs/ ; mkdir ~/Library/Caches/pypoetry/virtualenvs/'
