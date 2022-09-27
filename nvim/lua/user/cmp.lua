@@ -1,27 +1,21 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
-
 if not cmp_status_ok then
-				return
+  return
 end
 
--- load luasnip 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
-
-if not_status_ok then
-				return
+if not snip_status_ok then
+  return
 end
 
---start lazy loading vscode snippets
 require("luasnip/loaders/from_vscode").lazy_load()
 
--- check backspace to make cmp behave
--- normal
 local check_backspace = function()
-				local col = vim.fn.col "." - 1
-				return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+  local col = vim.fn.col "." - 1
+  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
--- Some iconns for the lsp
+--   פּ ﯟ   some other good icons
 local kind_icons = {
   Text = "",
   Method = "m",
@@ -107,6 +101,7 @@ cmp.setup {
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
+        nvim_lsp = "[LSP]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
@@ -115,6 +110,7 @@ cmp.setup {
     end,
   },
   sources = {
+    { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
@@ -123,7 +119,7 @@ cmp.setup {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-	window = {
+  window = {
     documentation = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     },
