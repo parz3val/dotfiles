@@ -40,10 +40,15 @@ source ~/dotfiles/zsh/aliases/mac_apps
 # Load the funny functions
 source ~/dotfiles/zsh/aliases/funny_alias
 alias eef='lvim ~/dotfiles/zsh/aliases/funny_alias'
+alias eec='nvim ~/dotfiles/zsh/aliases/linux_config_mgmt'
 
 
 # load leftwm shortcuts
 source ~/dotfiles/zsh/aliases/leftwm
+
+# load linux config management shortcut
+source ~/dotfiles/zsh/aliases/linux_config_mgmt
+
 
 # fuzzy finder script to find file
 fn(){ du -a  | awk '{print $2}' | fzf | xargs  nvim }
@@ -56,3 +61,4 @@ alias epe='ddd;cd Programming'
 # with exa
 alias cef='$HOME;cd .config;exa -GFa'
 alias mpr='rm -rf ~/Library/Caches/pypoetry/virtualenvs/ ; mkdir ~/Library/Caches/pypoetry/virtualenvs/'
+alias clr='echo "Cleaning rust dist and target";rm -rf target dist'
