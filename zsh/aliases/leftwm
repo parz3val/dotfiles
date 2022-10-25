@@ -1,3 +1,3 @@
 # aliases specific to leftwm linux
 alias leet='nvim ~/.config/leftwm/config.toml'
-alias sheet='nvim ~/.config/sxhkd/sxhkdrc'
+alias sx='nvim ~/.config/sxhkd/sxhkdrc'
