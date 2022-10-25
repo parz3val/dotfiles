@@ -5,5 +5,5 @@
 ##########################################
 
 ## DOT FILES AUTO COMMIT
-alias dgc='cd ~/dotfiles; git add . ; git commit -m "changes: auto updated via command, changes";hhh'
+alias dgc='cd ~/dotfiles; git add . ; git commit -m "changes: auto updated via command, changes"; git push;hhh'
 
