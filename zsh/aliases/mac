@@ -1,3 +1,11 @@
+#######################################################
+#######################################################
+################ SHORTCUTS AND STUFF # ################
+#######################################################
+#######################################################
+
+
+
 # Aliases for the my mac workflow
 alias rrr="source ~/.zshrc" # reloads the zshrc/bashrc
 alias eee="nvim ~/.zshrc" # loads zshrc in vi to edit
@@ -16,49 +24,112 @@ alias home='hhh;'
 alias www='ppp;gotomate'
 alias seehome='exa ~'
 alias doc='home; Documents'
-#Aliases for the tmux control and stuff
-alias twork='tmux attach-session -t work'
-alias tf='tmux attach-session -t 0'
-alias tww='tmux new -s work'
-alias thh='tmux new -s home'
-alias tk='tmux new -s work'
+
+
+
+#######################################################
+#######################################################
+################ Aliases for the tmux #################
+#######################################################
+#######################################################
+
+
+# Creating named sessions for ease of use
+alias tww='tmux new -s WORK'
+alias thh='tmux new -s HOME'
+alias thi='tmux new -s INSTALL'
 alias tff='tmux new -s FUN'
-alias ftf='tmux attach-session -t FUN'
-alias tss='tmux list-sessions'
-alias t11='tmux attach-session -t 1'
+
+# Connect easily to the sessions from
+# new terminal
+# Connect based on id
+alias tt0='tmux attach-session -t 1'
+alias tt1='tmux attach-session -t 1'
+
+# Connect with names
+alias tti='tmux attach-session -t INSTALL'
+alias tth='tmux attach-session -t HOME'
+alias ttf='tmux attach-session -t FUN'
+alias ttw='tmux attach-session -t WORK'
+alias tts='tmux list-sessions'
 alias ta='tmux attach'
-alias t='tmux'
+alias t='tmux new -s HOME'
+
+# alias lvim as nvim in case I use 
+# Lunarvim somewhere,
+# I can replace easily
 alias lvim='nvim'
-alias eet='lvim ~/.tmux.conf'
+
+# Edit tmux config and 
+# save the replace the file in 
+# dotfiles directory
+#
+alias eet='lvim ~/.tmux.conf; cp ~/.tmux.conf ~/dotfiles/tmux/'
+
+# Ease of use terminal comands to clear and exit
 alias cls='clear'
 alias eo='exit' # exit out
 alias rr='clear'
-#Load the alias for the mac apps
+
+#######################################################
+#######################################################
+################ LOAD ALIASES #########################
+#######################################################
+#######################################################
+
+
+# Loading aliases from other files
+# TODO: Add conditional to change on mac/linux
+# Load the alias for the mac apps/ main aliases
 source ~/dotfiles/zsh/aliases/mac_apps
 
-
-# Load the funny functions
+# Load the funny functions - and edit em
 source ~/dotfiles/zsh/aliases/funny_alias
 alias eef='lvim ~/dotfiles/zsh/aliases/funny_alias'
-alias eec='nvim ~/dotfiles/zsh/aliases/linux_config_mgmt'
-
 
 # load leftwm shortcuts
 source ~/dotfiles/zsh/aliases/leftwm
+alias eel='lvim ~/dotfiles/zsh/aliases/leftwm'
 
-# load linux config management shortcut
+# load linux config management shortcut and edit em
 source ~/dotfiles/zsh/aliases/linux_config_mgmt
+alias eec='nvim ~/dotfiles/zsh/aliases/linux_config_mgmt'
+
+
+#######################################################
+#######################################################
+################ MORE TRIVIAL ALIASES #################
+#######################################################
+#######################################################
+
 
 
 # fuzzy finder script to find file
 fn(){ du -a  | awk '{print $2}' | fzf | xargs  nvim }
+
+# mac specific alias
 alias we='de; krispcall-backend'
 
+
 # go into the external drive and load the progamming folder
+# Very mac specific
 alias epe='ddd;cd Programming'
 
 # go into the config folder and list
 # with exa
 alias cef='$HOME;cd .config;exa -GFa'
+
+# Workkflow specific aliases
+# Python
+# Cleans poetry virtualenv folder on mac
 alias mpr='rm -rf ~/Library/Caches/pypoetry/virtualenvs/ ; mkdir ~/Library/Caches/pypoetry/virtualenvs/'
+# cleans poetry virtualenv on linux
+alias lpr='echo "Cleaning the ~/.cache/pypoetry/virtulenvs; rm -rf ~/.cache/pypoetry/virtualenvs; mkdir ~/.cache/pypoetry/virtualenvs;'
+
+# Rust
+# Clean the rust target and dist folder - pretty painful to do
 alias clr='echo "Cleaning rust dist and target";rm -rf target dist'
+
+# add the rust application without the
+# dist and target folder
+alias gar='clr;g add .'
