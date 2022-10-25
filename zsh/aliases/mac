@@ -12,6 +12,7 @@ alias eee="nvim ~/.zshrc" # loads zshrc in vi to edit
 alias ddd="cd ~/../../Volumes/ExternalDisk"
 alias rrr="source ~/.zshrc"
 alias hhh="cd ~"
+alias h="cd ~"
 alias eea="lvim ~/dotfiles/zsh/aliases/mac"
 alias eep="lvim ~/dotfiles/zsh/aliases/mac_apps"
 alias xp="ddd; cd experiments"

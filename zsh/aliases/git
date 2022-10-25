@@ -5,5 +5,10 @@
 ##########################################
 
 ## DOT FILES AUTO COMMIT
-alias dgc='cd ~/dotfiles; git add . ; git commit -m "changes: auto updated via command, changes"; git push;hhh'
+alias dgc='cd ~/dotfiles; git add . ; git commit -m " 🗒️: 🎉🎉🎉  Sync progress from local application to remote 🎉🎉 ";  git push;hhh'
 
+# Kind of default empty commit to quickly sync the 
+# changes to the main repo
+alias egc='git add .; git commit -m " 🗒️: 🎉🎉🎉  Sync progress from local application to remote 🎉🎉 "; git push'
+alias rgc='clr; git add .; git commit -m " 🗒️: 🎉🎉🎉  Sync progress from local application to remote 🎉🎉 "; git push'
+alias rad='clr;g add .;'
