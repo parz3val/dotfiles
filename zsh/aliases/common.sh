@@ -84,7 +84,6 @@ alias rr='clear'
 # Loading aliases from other files
 # TODO: Add conditional to change on mac/linux
 # Load the alias for the mac apps/ main aliases
-source ~/dotfiles/zsh/aliases/mac_apps
 
 # Load the funny functions - and edit em
 source ~/dotfiles/zsh/aliases/funny_alias
@@ -113,13 +112,6 @@ alias eec='nvim ~/dotfiles/zsh/aliases/linux_config_mgmt'
 # fuzzy finder script to find file
 fn(){ du -a  | awk '{print $2}' | fzf | xargs  nvim }
 
-# mac specific alias
-alias we='de; krispcall-backend'
-
-
-# go into the external drive and load the progamming folder
-# Very mac specific
-alias epe='ddd;cd Programming'
 
 # go into the config folder and list
 # with exa
