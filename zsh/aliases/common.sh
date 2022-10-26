@@ -9,14 +9,10 @@
 # Aliases for the my mac workflow
 alias rrr="source ~/.zshrc" # reloads the zshrc/bashrc
 alias eee="nvim ~/.zshrc" # loads zshrc in vi to edit
-alias ddd="cd ~/../../Volumes/ExternalDisk"
 alias rrr="source ~/.zshrc"
 alias hhh="cd ~"
 alias h="cd ~"
-alias eea="lvim ~/dotfiles/zsh/aliases/mac"
-alias eep="lvim ~/dotfiles/zsh/aliases/mac_apps"
-alias xp="ddd; cd experiments"
-alias ppp='ddd;cd programming'
+alias eea="lvim ~/dotfiles/zsh/aliases/common.sh"
 alias f='exa -GF'
 alias ff='exa -aGF'
 alias jj='clear'
@@ -24,39 +20,11 @@ alias b='cd ..'
 alias bb='b;b'
 alias bbb='b;b;b;'
 alias home='hhh;'
-alias www='ppp;gotomate'
 alias seehome='exa ~'
 alias doc='home; Documents'
 
 
 
-#######################################################
-#######################################################
-################ Aliases for the tmux #################
-#######################################################
-#######################################################
-
-
-# Creating named sessions for ease of use
-alias tww='tmux new -s WORK'
-alias thh='tmux new -s HOME'
-alias thi='tmux new -s INSTALL'
-alias tff='tmux new -s FUN'
-
-# Connect easily to the sessions from
-# new terminal
-# Connect based on id
-alias tt0='tmux attach-session -t 1'
-alias tt1='tmux attach-session -t 1'
-
-# Connect with names
-alias tti='tmux attach-session -t INSTALL'
-alias tth='tmux attach-session -t HOME'
-alias ttf='tmux attach-session -t FUN'
-alias ttw='tmux attach-session -t WORK'
-alias tts='tmux list-sessions'
-alias ta='tmux attach'
-alias t='tmux new -s HOME'
 
 # alias lvim as nvim in case I use 
 # Lunarvim somewhere,
@@ -80,27 +48,19 @@ alias rr='clear'
 #######################################################
 #######################################################
 
-
-# Loading aliases from other files
-# TODO: Add conditional to change on mac/linux
-# Load the alias for the mac apps/ main aliases
-
 # Load the funny functions - and edit em
 source ~/dotfiles/zsh/aliases/funny_alias
 alias eef='lvim ~/dotfiles/zsh/aliases/funny_alias'
 
-# load leftwm shortcuts
-source ~/dotfiles/zsh/aliases/leftwm
-alias eel='lvim ~/dotfiles/zsh/aliases/leftwm'
 
-# load leftwm shortcuts
-source ~/dotfiles/zsh/aliases/git
-alias eeg='lvim ~/dotfiles/zsh/aliases/git'
-# load linux config management shortcut and edit em
-source ~/dotfiles/zsh/aliases/linux_config_mgmt
-alias eec='nvim ~/dotfiles/zsh/aliases/linux_config_mgmt'
+# load git aliases
+source ~/dotfiles/zsh/aliases/git.sh
+alias eeg='lvim ~/dotfiles/zsh/aliases/git.sh'
 
 
+# load tmux aliases
+source ~/dotfiles/zsh/aliases/tshorts.sh
+alias ett='lvim ~/dotfiles/zsh/aliases/tshorts.sh'
 #######################################################
 #######################################################
 ################ MORE TRIVIAL ALIASES #################

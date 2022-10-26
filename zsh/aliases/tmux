@@ -1,5 +1,0 @@
-// Aliases for the tmux control and stuff
-alias twork='tmux attach-session -t work'
-alias tf='tmux attach-session -t 0'
-alias tk='tmux new -s work'
-
