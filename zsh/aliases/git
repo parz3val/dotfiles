@@ -12,3 +12,4 @@ alias dgc='cd ~/dotfiles; git add . ; git commit -m " 🗒️: 🎉🎉🎉  Syn
 alias egc='git add .; git commit -m " 🗒️: 🎉🎉🎉  Sync progress from local application to remote 🎉🎉 "; git push'
 alias rgc='clr; git add .; git commit -m " 🗒️: 🎉🎉🎉  Sync progress from local application to remote 🎉🎉 "; git push'
 alias rad='clr;g add .;'
+alias gsa='git status';
