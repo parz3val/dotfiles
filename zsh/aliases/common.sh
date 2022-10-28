@@ -15,6 +15,7 @@ alias h="cd ~"
 alias eea="lvim ~/dotfiles/zsh/aliases/common.sh"
 alias f='exa -GF'
 alias ff='exa -aGF'
+alias tt='exa -T'
 alias jj='clear'
 alias b='cd ..'
 alias bb='b;b'
@@ -49,8 +50,8 @@ alias rr='clear'
 #######################################################
 
 # Load the funny functions - and edit em
-source ~/dotfiles/zsh/aliases/funny_alias
-alias eef='lvim ~/dotfiles/zsh/aliases/funny_alias'
+source ~/dotfiles/zsh/aliases/funny_alias.sh
+alias eef='lvim ~/dotfiles/zsh/aliases/funny_alias.sh'
 
 
 # load git aliases
@@ -60,7 +61,7 @@ alias eeg='lvim ~/dotfiles/zsh/aliases/git.sh'
 
 # load tmux aliases
 source ~/dotfiles/zsh/aliases/tshorts.sh
-alias ett='lvim ~/dotfiles/zsh/aliases/tshorts.sh'
+alias ett='lvim ~/dotfiles/zsh/aliases/tmux.sh'
 #######################################################
 #######################################################
 ################ MORE TRIVIAL ALIASES #################
