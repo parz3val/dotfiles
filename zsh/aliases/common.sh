@@ -85,7 +85,7 @@ alias cef='$HOME;cd .config;exa -GFa'
 # Cleans poetry virtualenv folder on mac
 alias mpr='rm -rf ~/Library/Caches/pypoetry/virtualenvs/ ; mkdir ~/Library/Caches/pypoetry/virtualenvs/'
 # cleans poetry virtualenv on linux
-alias apr='echo "Cleaning the ~/.cache/pypoetry/virtulenvs; rm -rf ~/.cache/pypoetry/virtualenvs; mkdir ~/.cache/pypoetry/virtualenvs;'
+alias ppr='echo "Cleaning the ~/.cache/pypoetry/virtulenvs; rm -rf ~/.cache/pypoetry/virtualenvs; mkdir ~/.cache/pypoetry/virtualenvs;'
 
 # Rust
 # Clean the rust target and dist folder - pretty painful to do
