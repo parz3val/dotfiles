@@ -7,5 +7,6 @@ then
   source ~/dotfiles/zsh/aliases/linux_specific.sh
 else
   source ~/dotfiles/zsh/aliases/mac_specific.sh
+  source ~/dotfiles/zsh/aliases/mac_apps.sh
 fi
 

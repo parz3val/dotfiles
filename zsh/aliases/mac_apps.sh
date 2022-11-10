@@ -8,9 +8,9 @@ alias spt='open -a "Spotify"'
 alias vsc='open -a "Visual Studio Code"'
 
 # VSCodium
-alias cod='open -a "VSCodium"'
+# alias cod='open -a "VSCodium"'
 
-alias code='open -a "VSCode"'
+# alias code='open -a "VSCode"'
 
 # Firefox
 alias firefox='open -a "Firefox"'
