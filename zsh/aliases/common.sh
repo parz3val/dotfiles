@@ -9,10 +9,9 @@
 # Aliases for the my mac workflow
 alias rrr="source ~/.zshrc" # reloads the zshrc/bashrc
 alias eee="nvim ~/.zshrc" # loads zshrc in vi to edit
-alias rrr="source ~/.zshrc"
 alias hhh="cd ~"
 alias h="cd ~"
-alias eea="lvim ~/dotfiles/zsh/aliases/common.sh"
+alias eea="lvim ~/dotfiles/zsh/aliases"
 alias f='exa -GF'
 alias ff='exa -aGF'
 alias tt='exa -T'
