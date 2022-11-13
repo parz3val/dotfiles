@@ -8,5 +8,6 @@ then
 else
   source ~/dotfiles/zsh/aliases/mac_specific.sh
   source ~/dotfiles/zsh/aliases/mac_apps.sh
+  source ~/dotfiles/zsh/aliases/mac_alphabet.sh
 fi
 
