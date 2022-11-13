@@ -11,7 +11,7 @@ alias rrr="source ~/.zshrc" # reloads the zshrc/bashrc
 alias eee="nvim ~/.zshrc" # loads zshrc in vi to edit
 alias hhh="cd ~"
 alias h="cd ~"
-alias eea="lvim ~/dotfiles/zsh/aliases"
+alias eea="cd ~/dotfiles/zsh/aliases; lvim . ; h"
 alias f='exa -GF'
 alias ff='exa -aGF'
 alias tt='exa -T'
@@ -79,10 +79,6 @@ fn(){ du -a  | awk '{print $2}' | fzf | xargs  nvim }
 # with exa
 alias cef='$HOME;cd .config;exa -GFa'
 
-# Workkflow specific aliases
-# Python
-# Cleans poetry virtualenv folder on mac
-alias mpr='rm -rf ~/Library/Caches/pypoetry/virtualenvs/ ; mkdir ~/Library/Caches/pypoetry/virtualenvs/'
 # cleans poetry virtualenv on linux
 alias ppr='echo "Cleaning the ~/.cache/pypoetry/virtulenvs; rm -rf ~/.cache/pypoetry/virtualenvs; mkdir ~/.cache/pypoetry/virtualenvs;'
 

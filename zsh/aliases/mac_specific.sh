@@ -10,3 +10,7 @@ alias xp="ddd; cd experiments"
 alias ppp='ddd;cd programming'
 alias www='ppp;gotomate'
 
+# Workkflow specific aliases
+# Python
+# Cleans poetry virtualenv folder on mac
+alias mpr='rm -rf ~/Library/Caches/pypoetry/virtualenvs/ ; mkdir ~/Library/Caches/pypoetry/virtualenvs/'
