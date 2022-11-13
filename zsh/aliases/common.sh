@@ -20,7 +20,7 @@ alias b='cd ..'
 alias bb='b;b'
 alias bbb='b;b;b;'
 alias home='hhh;'
-alias seehome='exa ~'
+alias sh='exa ~'
 alias doc='home; Documents'
 
 
@@ -60,7 +60,7 @@ alias eeg='lvim ~/dotfiles/zsh/aliases/git.sh'
 
 # load tmux aliases
 source ~/dotfiles/zsh/aliases/tshorts.sh
-alias ett='lvim ~/dotfiles/zsh/aliases/tmux.sh'
+alias ett='lvim ~/dotfiles/zsh/aliases/tshorts.sh'
 #######################################################
 #######################################################
 ################ MORE TRIVIAL ALIASES #################
