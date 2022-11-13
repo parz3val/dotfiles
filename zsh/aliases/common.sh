@@ -79,8 +79,6 @@ fn(){ du -a  | awk '{print $2}' | fzf | xargs  nvim }
 # with exa
 alias cef='$HOME;cd .config;exa -GFa'
 
-# cleans poetry virtualenv on linux
-alias ppr='echo "Cleaning the ~/.cache/pypoetry/virtulenvs; rm -rf ~/.cache/pypoetry/virtualenvs; mkdir ~/.cache/pypoetry/virtualenvs;'
 
 # Rust
 # Clean the rust target and dist folder - pretty painful to do
