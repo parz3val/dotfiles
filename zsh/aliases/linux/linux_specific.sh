@@ -1,8 +1,8 @@
-source ~/dotfiles/zsh/aliases/linux/leftwm
-alias eel='lvim ~/dotfiles/zsh/aliases/linux/leftwm'
+source ~/dotfiles/zsh/aliases/linux/leftwm.sh
+alias eel='lvim ~/dotfiles/zsh/aliases/linux/leftwm.sh'
 # load linux config management shortcut and edit em
-source ~/dotfiles/zsh/aliases/linux/linux_config_mgmt
-alias eec='nvim ~/dotfiles/zsh/aliases/linux/linux_config_mgmt'
+source ~/dotfiles/zsh/aliases/linux/config.sh
+alias eec='nvim ~/dotfiles/zsh/aliases/linux/config.sh'
 
 
 # Workflow specific
