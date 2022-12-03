@@ -11,6 +11,7 @@ alias rrr="source ~/.zshrc" # reloads the zshrc/bashrc
 alias eee="nvim ~/.zshrc" # loads zshrc in vi to edit
 alias hhh="cd ~"
 alias h="cd ~"
+alias k='kubectl'
 alias eea="cd ~/dotfiles/zsh/aliases; lvim . ; h"
 alias f='exa -GF'
 alias ff='exa -aGF'
