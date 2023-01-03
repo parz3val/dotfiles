@@ -57,5 +57,6 @@ use({
   },
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
 })
-
+use('norcalli/nvim-colorizer.lua')
+use { "ellisonleao/gruvbox.nvim" }
 end)
