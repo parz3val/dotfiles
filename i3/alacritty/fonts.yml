@@ -1,0 +1,33 @@
+# Font configuration
+font:
+  normal:
+    family: "Fira Code"
+    style: Normal
+
+  # Bold font face
+  bold:
+    family: "Recursive Mono Linear Static"
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: "Recursive Mono Linear Static"
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: "Recursive Mono Linear Static"
+    style: Bold Italic
+
+  # Point size
+  size: 10
+
+  # Offset
+  #offset:
+  #  x: 0
+  #  y: 0
+
+  # Glyph offset
+  #glyph_offset:
+  #  x: 0
+  #  y: 0
