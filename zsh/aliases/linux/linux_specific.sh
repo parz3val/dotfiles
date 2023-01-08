@@ -5,7 +5,7 @@ source ~/dotfiles/zsh/aliases/linux/config.sh
 alias eec='nvim ~/dotfiles/zsh/aliases/linux/config.sh'
 
 # Load the i3 config into the nvim session
-alias ee3='nvi ~/.config/i3/config;cd $HOME;cp -r ~/.config/i3 ~/dotfiles/;dgc;'
+alias ee3='nvim ~/.config/i3/config;cd $HOME;cp -r ~/.config/i3 ~/dotfiles/;dgc;'
 
 
 # Workflow specific
