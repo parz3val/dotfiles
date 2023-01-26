@@ -11,5 +11,6 @@ alias dgc='cd ~/dotfiles; git add . ; git commit -m " 🗒️: 🎉🎉🎉  Syn
 # changes to the main repo
 alias egc='git add .; git commit -m " 🗒️: 🎉🎉🎉  Sync progress from local application to remote 🎉🎉 "; git push'
 alias rgc='clr; git add .; git commit -m " 🗒️: 🎉🎉🎉  Sync progress from local application to remote 🎉🎉 "; git push'
+alias tgc='rm -rf dist;rm -rf node_modules; git add .; git commit -m " 🗒️: 🎉🎉🎉  Sync progress from local application to remote 🎉🎉 "; git push'
 alias rad='clr;g add .;'
 alias gsa='git status';
