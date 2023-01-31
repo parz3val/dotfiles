@@ -6,6 +6,7 @@ if [[ `uname` == "Linux" ]]
 then
   source ~/dotfiles/zsh/aliases/linux/linux_specific.sh
 else
+  echo "Setting mac alises"
   source ~/dotfiles/zsh/aliases/mac/mac_specific.sh
   source ~/dotfiles/zsh/aliases/mac/mac_apps.sh
   source ~/dotfiles/zsh/aliases/mac/mac_alphabet.sh
