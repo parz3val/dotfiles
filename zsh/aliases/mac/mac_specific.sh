@@ -14,3 +14,7 @@ alias www='ppp;gotomate'
 # Python
 # Cleans poetry virtualenv folder on mac
 alias mpr='rm -rf ~/Library/Caches/pypoetry/virtualenvs/ ; mkdir ~/Library/Caches/pypoetry/virtualenvs/'
+
+# Start wallierallie
+alias ww='cd ~/wallierallie/; cargo run'
+alias cr='cargo run'
