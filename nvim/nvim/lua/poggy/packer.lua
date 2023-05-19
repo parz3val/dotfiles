@@ -58,5 +58,6 @@ use({
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
 })
 use('norcalli/nvim-colorizer.lua')
-use { "ellisonleao/gruvbox.nvim" }
+-- gruvbox seems to have some issues related to sumenko lua
+-- use { "ellisonleao/gruvbox.nvim" }
 end)
