@@ -11,6 +11,7 @@ alias tww='tmux new -s WORK'
 alias thh='tmux new -s HOME'
 alias thi='tmux new -s INSTALL'
 alias tff='tmux new -s FUN'
+alias tdd='tmux new -S DOCKER'
 
 # Connect easily to the sessions from
 # new terminal
@@ -24,6 +25,7 @@ alias tth='tmux attach-session -t HOME'
 alias ttf='tmux attach-session -t FUN'
 alias ttw='tmux attach-session -t WORK'
 alias tts='tmux list-sessions'
+alias ttd='tmux attach-session -t DOCKER'
 alias ta='tmux attach'
 alias t='tmux new -s HOME'
 

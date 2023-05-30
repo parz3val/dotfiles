@@ -1,0 +1,6 @@
+###################
+#Reduce the right volume by 40%.
+pactl info | awk '/Default Sink:/ {print $NF}'
+
+pactl set-sink-volume alsa_output.pci-0000_05_00.6.HiFi__hw_Generic_1__sink 40%
+
