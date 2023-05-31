@@ -195,6 +195,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	position bottom
+    status_command i3status -c ~/.config/i3status/config
 	mode hide
 }
 
