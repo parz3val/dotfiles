@@ -16,3 +16,7 @@ alias gll='git log --oneline'
 alias glb='git log'
 alias rad='clr;g add .;'
 alias gsa='git status';
+alias grr='git restore .'
+alias gr='git restore'
+alias gpp='git push'
+alias gpu='git pull'
