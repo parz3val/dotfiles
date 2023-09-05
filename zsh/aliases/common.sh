@@ -61,7 +61,7 @@ alias eeg='lvim ~/dotfiles/zsh/aliases/git.sh'
 
 # load tmux aliases
 source ~/dotfiles/zsh/aliases/tshorts.sh
-alias ett='lvim ~/dotfiles/zsh/aliases/tshorts.sh'
+alias ees='lvim ~/dotfiles/zsh/aliases/tshorts.sh'
 
 
 #######################################################
