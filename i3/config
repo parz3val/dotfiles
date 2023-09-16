@@ -42,9 +42,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-#gaps inner 18
-#gaps outer 18
-
+gaps inner 2
+gaps outer 2
+#
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -209,23 +209,32 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    colors {
-        background #282828
-        statusline #ebdbb2
-        separator #454545
-    
-        focused_workspace #d48700 #9d6800 #ebdbb2
-        active_workspace   #8f6f00 #6e4c00 #ebdbb2
-        inactive_workspace #665c54 #3c3836 #ebdbb2
-        urgent_workspace   #fe8019 #9d6800 #ebdbb2
-        binding_mode       #fe8019 #9d6800 #ebdbb2
-    }
-	position bottom
-    status_command i3status -c ~/.config/i3status/config
-	mode hide
-}
+#bar {
+#    colors {
+#        background #282828
+#        statusline #ebdbb2
+#        separator #454545
+#    
+#        focused_workspace #d48700 #9d6800 #ebdbb2
+#        active_workspace   #8f6f00 #6e4c00 #ebdbb2
+#        inactive_workspace #665c54 #3c3836 #ebdbb2
+#        urgent_workspace   #fe8019 #9d6800 #ebdbb2
+#        binding_mode       #fe8019 #9d6800 #ebdbb2
+#    }
+#	position bottom
+#    status_command i3status -c ~/.config/i3status/config
+#	mode hide
+#}
 
+## This is related to client focused colors stuff
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
 
 # swap capslock and esc
 exec_always  xmodmap ~/caps_es_swap
@@ -235,4 +244,4 @@ exec_always  xmodmap ~/caps_es_swap
 exec_always picom
 
 # set wallpaper 
-exec feh --randomize --bg-fill ~/.cache/.feh
+exec wal -R 
