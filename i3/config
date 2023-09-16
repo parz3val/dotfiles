@@ -113,6 +113,9 @@ bindsym $mod+Shift+Right move right
 # split in horizontal orientation
 bindsym $mod+h split h
 
+# Toggle polybar visibility
+bindsym $mod+b exec --no-startup-id polybar-msg cmd toggle
+
 # split in vertical orientation
 bindsym $mod+v split v
 
@@ -238,6 +241,12 @@ client.background       #ffffff
 
 # swap capslock and esc
 exec_always  xmodmap ~/caps_es_swap
+
+# Execute polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh 
+
+# border pixel stuff
+for_window [class="Polybar"] border pixel 0
 
 
 # compton stuff
