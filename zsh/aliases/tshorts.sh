@@ -12,6 +12,7 @@ alias thh='tmux new -s HOME'
 alias thi='tmux new -s INSTALL'
 alias tff='tmux new -s FUN'
 alias tdd='tmux new -S DOCKER'
+alias tkk='tmux kill-server'
 
 # Connect easily to the sessions from
 # new terminal

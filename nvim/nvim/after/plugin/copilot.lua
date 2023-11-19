@@ -1,3 +1,0 @@
--- copilot config stuff
-vim.g.copilot_no_tab_map = true
-
