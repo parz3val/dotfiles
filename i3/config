@@ -17,10 +17,9 @@ set $mod Mod4
 # no titlebar
 # Hide title bar for all windows
 for_window [class=".*"] border pixel 0
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Hack Regular Nerd Font Complete, 10
+font pango:Monaspace Neon, 16
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -42,8 +41,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-gaps inner 2
-gaps outer 2
+#gaps inner 5
+#gaps outer 5
 #
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -52,6 +51,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+bindsym XF86MonBrightnessUp exec brightnessctl s 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -60,13 +61,12 @@ floating_modifier $mod
 #tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # start visual studio code
 bindsym $mod+Shift+v exec code
 
 # start browser
-bindsym $mod+Shift+b exec google-chrome-stable
 
 # start firefox
 bindsym $mod+Shift+f exec firefox
@@ -212,45 +212,45 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#    colors {
-#        background #282828
-#        statusline #ebdbb2
-#        separator #454545
-#    
-#        focused_workspace #d48700 #9d6800 #ebdbb2
-#        active_workspace   #8f6f00 #6e4c00 #ebdbb2
-#        inactive_workspace #665c54 #3c3836 #ebdbb2
-#        urgent_workspace   #fe8019 #9d6800 #ebdbb2
-#        binding_mode       #fe8019 #9d6800 #ebdbb2
-#    }
-#	position bottom
-#    status_command i3status -c ~/.config/i3status/config
-#	mode hide
-#}
+bar {
+    colors {
+		background #020304
+    statusline #ebdbb2
+		separator #1B486A
+		focused_workspace #bfc0c0 #1B486A #020304
+		active_workspace #485770 #020304 #020304
+		inactive_workspace #1B486A #020304 #485770
+		urgent_workspace #1F3E61 #bfc0c0 #485770
+		binding_mode #1F3E61 #bfc0c0 #485770
+    }
+		position bottom
+         status_command i3status -c ~/.config/i3status/config
+	mode hide
+}
 
 ## This is related to client focused colors stuff
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.focused 		      #1B486A #32435A #bfc0c0 #485770 #384B66
+client.focused_inactive 	#1B486A #32435A #bfc0c0 #020304 #384B66
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #ffffff
 
-# swap capslock and esc
-exec_always  xmodmap ~/caps_es_swap
+# Applications that need to be spun up with i3
 
-# Execute polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh 
+# changing the DPI
+exec_always --no-startup-id xrdb merge ~/.Xresources
 
-# border pixel stuff
-for_window [class="Polybar"] border pixel 0
+# Switch the caps lock with esc and vice versa
+exec_always --no-startup-id setxkbmap -option caps:escape
+
+# start picom with the config
+exec_always --no-startup-id killall picom
+#exec_always  picom --config $HOME/.config/picom/picom.conf
+exec --no-startup-id wal -R
+
+exec --no-startup-id i3-dump-log | tee -a ~/.i3/log
 
 
-# compton stuff
-exec_always picom
 
-# set wallpaper 
-exec wal -R 

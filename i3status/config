@@ -1,0 +1,22 @@
+general {
+	output_format = "dzen2"
+	colors = true
+	interval = 5
+}
+
+order += "tztime local"
+
+battery 0 {
+        format = "%status %percentage %remaining %emptytime"
+        format_down = "No battery"
+        status_chr = "/ CHR"
+        status_bat = "|| BAT"
+        status_unk = "? UNK"
+        status_full = "☻ FULL"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
+}
+
+tztime local {
+	format = "%Y-%m-%d %H:%M"
+}
