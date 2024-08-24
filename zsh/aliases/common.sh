@@ -13,7 +13,8 @@ alias hhh="cd ~"
 alias h="cd ~"
 alias k='kubectl'
 alias eea="cd ~/dotfiles/zsh/aliases; lvim . ; h"
-alias f='exa -GF'
+alias ls='eza --icons=always'
+alias f='eza --icons=always'
 alias ff='exa -aGF'
 alias tt='exa -T'
 alias jj='clear'

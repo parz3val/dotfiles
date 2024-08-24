@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # Stuff related to nvidia graphics
-exec xrandr --auto
+#exec xrandr --auto
 
 set $mod Mod4
 
@@ -240,17 +240,17 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # Applications that need to be spun up with i3
 
 # changing the DPI
-exec_always --no-startup-id xrdb merge ~/.Xresources
+#exec_always --no-startup-id xrdb merge ~/.Xresources
 
 # Switch the caps lock with esc and vice versa
 exec_always --no-startup-id setxkbmap -option caps:escape
 
 # start picom with the config
-exec_always --no-startup-id killall picom
+#exec_always --no-startup-id killall picom
 #exec_always  picom --config $HOME/.config/picom/picom.conf
-exec --no-startup-id wal -R
+#exec --no-startup-id wal -R
 
-exec --no-startup-id i3-dump-log | tee -a ~/.i3/log
+#exec --no-startup-id i3-dump-log | tee -a ~/.i3/log
 
 
 
