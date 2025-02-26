@@ -25,10 +25,6 @@ vim.g.mapleader = ' '
 -- import the options from the options menu
 require('options')
 
--- import the themes and such
-require('colors')
-
-
 --Plugins 
 require('lazyconfig')
 
@@ -39,7 +35,7 @@ require('plugins/nvimtree')
 require('plugins/lspconfig')
 
 -- import plugins setups
-require('plugins/lualines')
+-- require('plugins/lualines')
 
 -- require treesitter setup
 require('plugins/treesitter')
@@ -49,4 +45,25 @@ require('plugins/telscopeconfig')
 
 -- require keymaps
 require('keymaps')
+require('neovide')
+require('plugins/nvim_cmp')
 
+require('plugins/colorizer')
+-- import the themes and such
+require('colors')
+
+-- TODO: Move this to a seperate plugin
+local nsd = require('nsd')
+require('plugins/commenter')
+vim.keymap.set('n', '<leader>ss',nsd.show_sessions_list, {})
+vim.keymap.set('n', '<leader>ls',nsd.save_session, {})
+
+-- Buffer manager
+require('buffer_manager')
+require('plugins/fine_cmdline_cfg')
+require('plugins/jkesc')
+require('plugins/tabbar')
+-- require('plugins/rust_nvim')
+require("plugins/blank_line")
+require('plugins/oil_setup')
+require('plugins/code_formatter')

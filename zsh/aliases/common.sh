@@ -19,6 +19,7 @@ alias ff='exa -aGF'
 alias tt='exa -T'
 alias jj='clear'
 alias b='cd ..'
+alias c='cd'
 alias bb='b;b'
 alias bbb='b;b;b;'
 alias home='hhh;'
@@ -91,3 +92,8 @@ alias clr='echo "Cleaning rust dist and target";rm -rf target dist'
 # add the rust application without the
 # dist and target folder
 alias gar='clr;g add .'
+
+# Editor 
+alias neovim='nvim'
+alias z='zed'
+
